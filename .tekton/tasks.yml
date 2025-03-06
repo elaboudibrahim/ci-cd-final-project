@@ -52,6 +52,8 @@ spec:
       workingDir: $(workspaces.source.path)
       script: |
               #!/bin/bash
+              echo "Workspace path is: $(workspaces.source.path)"
+              ls -l $(workspaces.source.path)
               set -e
               python -m pip install --upgrade pip wheel
               pip install -r requirements.txt
